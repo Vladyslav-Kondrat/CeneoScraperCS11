@@ -13,14 +13,16 @@ https://www.ceneo.pl/84514582#tab=reviews_scroll
 ## Analyzis of teh structure of the webpage
 |Component|Selector|Variable|
 |---------|--------|--------|
-|opinion ID | | |
-|author | | |
-|recommendation | | |
-|number of stars | | |
-|content of opinion | | |
-|list of adventages | | |
-|list of disadventages | | |
-|for how many helpful | | |
-|for how many unhelpful | | |
-|publishing date | | |
-|purchase date | | |
+|opinion |div.js_product-review|opinion|
+|opinion ID |[data-entry-id]|opinion_id|
+|author |span.user.post__author-name|author|
+|recommendation |user-post__author-recomendation > em|recommendation|
+|number of stars |span.user-post__score-count|stars|
+|content of opinion |div.user-post__text|content|
+|list of adventages |div.review-feature__item--positive|pros|
+|list of disadventages |div.review-feature__item--negative|cons|
+|for how many helpful |button.vote-yes[data-total-vote]|vote_yes|
+|for how many helpful |button.vote-yes > span|vote_no|
+|for how many unhelpful |button.vote-no > span|vote_no|
+|publishing date |span.user-post__published > time:nth-child(1)[datetime]|published|
+|purchase date |span.user-post__published > time:nth-child(2)[datetime]|purchased|
